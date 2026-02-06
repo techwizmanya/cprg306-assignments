@@ -1,22 +1,13 @@
-import Link from "next/link";
+import ItemList from "./week-4/item-list";
 
-export default function Home() {
+export default function Page() {
   return (
-    <main className="p-8">
-      <h1 className="text-3xl font-bold mb-4">
-        CPRG 306 Assignments
+    <main className="p-6">
+      <h1 className="text-2xl font-bold mb-4">
+        Shopping List
       </h1>
 
-      <ul className="list-disc pl-6">
-        <li>
-          <Link
-            href="/week-3"
-            className="text-blue-600 hover:underline"
-          >
-            Week 3 Assignment
-          </Link>
-        </li>
-      </ul>
+      <ItemList />
     </main>
   );
 }
