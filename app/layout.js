@@ -1,5 +1,6 @@
-import { AuthContextProvider } from "./contexts/AuthContext";
 import "./globals.css";
+import { AuthContextProvider } from "./contexts/AuthContext";
+import Navbar from "./components/Navbar";
 
 export const metadata = {
   title: "CPRG 306 Assignments",
@@ -10,7 +11,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <AuthContextProvider>{children}</AuthContextProvider>
+        <AuthContextProvider>
+          <Navbar />
+          {children}
+        </AuthContextProvider>
       </body>
     </html>
   );
